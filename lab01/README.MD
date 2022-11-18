@@ -1,19 +1,13 @@
-# Deploy java application to K8s 
-
-### Build Docker image
-`docker build -t cuongnmdev/k8s-lab01:latest .`
-
-### Test Docker image
-`docker run -d -p 8333:8080 --name java-application cuongnmdev/k8s-lab01`
-
-### Push to repository
-`docker push cuongnmdev/k8s-lab01:latest`
-
 ### Deploy on K8s
+
+![img.png](img.png)
+
+
+
 `kubectl apply -f deployment/deployment.yaml`
 
 ### View all
-`kubeclt get po -o wide`
+`kubeclt get all -o wide`
 
 ### View deployment
 `kubectl get deployment`
