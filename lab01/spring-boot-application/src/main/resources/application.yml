@@ -1,0 +1,13 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+  endpoint:
+    health:
+      show-details: always
+      roles: SCOPE_health-details
+spring:
+  jackson:
+    serialization:
+      write_dates_as_timestamps: true

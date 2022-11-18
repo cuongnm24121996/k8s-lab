@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application
+spec:
+  selector:
+    matchLabels:
+      app: application
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: application
+    spec:
+      containers:
+        - name: application
+          image: cuongnmdev/k8s-lab01:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 8080
+#          livenessProbe:
+#            httpGet:
+#              path: /healthcheck
+#              port: 8025
+#            initialDelaySeconds: 30
+#            timeoutSeconds: 1
