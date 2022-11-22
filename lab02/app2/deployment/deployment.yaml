@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab02-app2
+spec:
+  selector:
+    matchLabels:
+      app: lab02-app2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lab02-app2
+    spec:
+      containers:
+        - name: lab02-app2
+          image: cuongnmdev/lab02:app2.1
+          ports:
+            - containerPort: 8080
+          env:
+            - name: APPLICATION_VERSION
+              valueFrom:
+                configMapKeyRef:
+                  name: lab02-app2
+                  key: app.version
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 1

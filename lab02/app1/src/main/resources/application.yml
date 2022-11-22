@@ -1,0 +1,16 @@
+application:
+  version: APPLICATION_VERSION
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+  endpoint:
+    health:
+      show-details: always
+      roles: SCOPE_health-details
+
+logging:
+  level:
+    cuongnm.k8s.app: debug
