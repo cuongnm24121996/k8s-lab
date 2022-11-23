@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+spec:
+  selector:
+    matchLabels:
+      app: keycloak
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+        - name: keycloak
+          image: quay.io/keycloak/keycloak:18.0.0-legacy
+          env:
+            - name: KEYCLOAK_USER
+              value: admin
+            - name: KEYCLOAK_PASSWORD
+              value: admin
+            - name: KEYCLOAK_LOGLEVEL
+              value: INFO
+            - name: DB_VENDOR
+              value: MYSQL
+            - name: DB_ADDR
+              value: 18.136.195.37
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_USER
+              value: root
+            - name: DB_DATABASE
+              value: keycloak
+            - name: DB_PASSWORD
+              value: password
+#          volumeMounts:
+#            - mountPath: /opt/jboss/keycloak/reaml-config.json
+#              name: keycloak-data
+          ports:
+            - name: http
+              containerPort: 8080
+#      volumes:
+#        - name: keycloak-data
+#          hostPath:
+#            path: ./reaml-config.json
