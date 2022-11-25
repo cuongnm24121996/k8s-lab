@@ -4,30 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c467c854-fd31-4fd3-b140-ee6fe8bcd6c1" name="Changes" comment="commit lab02">
-      <change afterPath="$PROJECT_DIR$/lab03/auth/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/deployment/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/java/com/vn/keycloak/authenticator/requited/update/phone/MobileNumberRequiredAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/java/com/vn/keycloak/authenticator/requited/update/phone/MobileNumberRequiredActionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/java/com/vn/keycloak/authenticator/sms/SmsAuthenticator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/java/com/vn/keycloak/authenticator/sms/SmsAuthenticatorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/java/com/vn/keycloak/authenticator/sms/gateway/AwsSmsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/java/com/vn/keycloak/authenticator/sms/gateway/SmsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/java/com/vn/keycloak/authenticator/sms/gateway/SmsServiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/resources/META-INF/services/org.keycloak.authentication.RequiredActionFactory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/resources/theme-resources/messages/messages_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/resources/theme-resources/messages/messages_vn.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/resources/theme-resources/templates/login-sms.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/auth/src/main/resources/theme-resources/templates/update-mobile-number.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/storage/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="c467c854-fd31-4fd3-b140-ee6fe8bcd6c1" name="Changes" comment="commit lab03:&#10;create deployment of keycloak">
+      <change afterPath="$PROJECT_DIR$/lab03/database/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/database/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/database/persistent-volume-claim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/database/secret.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/database/service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/database/storage-class.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/auth/deployment/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/auth/deployment/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/auth/deployment/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/auth/deployment/deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,33 +51,36 @@
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/cuongnm11/cuongnm/source/k8s-lab/lab02",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "b820bca178c787c8c31eba701d380bfe"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/cuongnm11/cuongnm/source/k8s-lab/lab03/volume&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b820bca178c787c8c31eba701d380bfe&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lab03/volume" />
       <recent name="$PROJECT_DIR$/lab02" />
       <recent name="$PROJECT_DIR$/lab02/app1/deployment" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lab03/auth/deployment" />
+      <recent name="$PROJECT_DIR$/lab03/auth/deployment/provider" />
       <recent name="$PROJECT_DIR$/lab01/application/deployment" />
       <recent name="$PROJECT_DIR$/lab01" />
     </key>
@@ -168,7 +157,8 @@
       <workItem from="1668997228173" duration="3837000" />
       <workItem from="1669043095677" duration="1089000" />
       <workItem from="1669044306797" duration="15697000" />
-      <workItem from="1669138027209" duration="4010000" />
+      <workItem from="1669138027209" duration="20205000" />
+      <workItem from="1669250603260" duration="15859000" />
     </task>
     <task id="LOCAL-00001" summary="commit lab02">
       <created>1669095601847</created>
@@ -184,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669095621191</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit lab03:&#10;create deployment of keycloak">
+      <created>1669144585268</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669144585269</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit lab03:&#10;create deployment of keycloak">
+      <created>1669168998711</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669168998711</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +212,7 @@
       <path value="$PROJECT_DIR$/lab03/keycloak-provider-lab" />
     </ignored-roots>
     <MESSAGE value="commit lab02" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit lab02" />
+    <MESSAGE value="commit lab03:&#10;create deployment of keycloak" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit lab03:&#10;create deployment of keycloak" />
   </component>
 </project>

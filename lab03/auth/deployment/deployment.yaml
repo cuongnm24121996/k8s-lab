@@ -21,32 +21,66 @@ spec:
       containers:
         - name: keycloak
           image: quay.io/keycloak/keycloak:18.0.0-legacy
+          args:
+            - "-b 0.0.0.0"
+            - "-Dkeycloak.profile.feature.upload_scripts=enabled"
+            - "-Dkeycloak.profile.feature.admin_fine_grained_authz=enabled"
+            - "-Dkeycloak.profile.feature.token_exchange=enabled"
+            - "-Dkeycloak.profile.feature.declarative_user_profile=enabled"
+            - "-Dkeycloak.import=/home/reaml-config.json"
           env:
             - name: KEYCLOAK_USER
-              value: admin
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.admin.username
             - name: KEYCLOAK_PASSWORD
-              value: admin
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.admin.password
             - name: KEYCLOAK_LOGLEVEL
-              value: INFO
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.log.level
             - name: DB_VENDOR
-              value: MYSQL
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.database.vendor
             - name: DB_ADDR
-              value: 18.136.195.37
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.database.address
             - name: DB_PORT
-              value: "3306"
-            - name: DB_USER
-              value: root
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.database.port
             - name: DB_DATABASE
-              value: keycloak
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.database.name
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secrets
+                  key: ROOT_USER
             - name: DB_PASSWORD
-              value: password
-#          volumeMounts:
-#            - mountPath: /opt/jboss/keycloak/reaml-config.json
-#              name: keycloak-data
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secrets
+                  key: ROOT_PASSWORD
           ports:
             - name: http
               containerPort: 8080
-#      volumes:
-#        - name: keycloak-data
-#          hostPath:
-#            path: ./reaml-config.json
+          volumeMounts:
+            - name: reaml-config
+              mountPath: /home
+      volumes:
+        - name: reaml-config
+          configMap:
+            name: reaml-config
