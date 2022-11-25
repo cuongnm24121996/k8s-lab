@@ -1,13 +1,17 @@
-# Keycloak 2FA SMS Authenticator
+# Keycloak with custom provider on k8s
 
-Keycloak Authentication Provider implementation to get a 2nd-factor authentication with a OTP/code/token send via SMS (through AWS SNS).
+### Build source
+    mvn clean install
 
-_Demo purposes only!_
+### Build image
+    docker build -t cuongnmdev:keycloak .
 
-Unfortunately, I don't have a real readme yet.
-Blame on me!
+### Create config map storage config
+    kubectl delete -f deployment/config.yaml
 
-But, for now, you can at least read my **blog post** about this autenticator here:
+### Create deployment
+    kubectl delete -f deployment/deployment.yaml
 
-Or, just watch my **video** about this 2FA SMS SPI:
-# keycloak-provider-lab
+### Create service
+    kubectl delete -f deployment/service.yaml
+

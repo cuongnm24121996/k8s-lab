@@ -7,7 +7,5 @@ data:
   keycloak.configuration.admin.username: admin
   keycloak.configuration.admin.password: admin
   keycloak.configuration.log.level: INFO
-  keycloak.configuration.database.vendor: MYSQL
-  keycloak.configuration.database.address: mysql-service
-  keycloak.configuration.database.port: "3306"
-  keycloak.configuration.database.name: keycloak
+  keycloak.configuration.database.vendor: mysql
+  keycloak.configuration.database.address: "jdbc:mysql://mysql-service:3306/keycloak"
