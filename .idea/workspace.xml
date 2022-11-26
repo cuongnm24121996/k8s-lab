@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c467c854-fd31-4fd3-b140-ee6fe8bcd6c1" name="Changes" comment="commit lab03:&#10;create deployment of mysql&#10;config reaml">
-      <change afterPath="$PROJECT_DIR$/lab03/cert/README.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/cert/ca.csr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/cert/tls.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/cert/tls.key" afterDir="false" />
+    <list default="true" id="c467c854-fd31-4fd3-b140-ee6fe8bcd6c1" name="Changes" comment="commit lab03:&#10;deploy keycloak with production mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/auth/deployment/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/auth/deployment/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab03/auth/deployment/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/auth/deployment/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/auth/deployment/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/auth/deployment/service.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669392148765</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit lab03:&#10;deploy keycloak with production mode">
+      <created>1669477383826</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669477383826</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +222,7 @@
     <MESSAGE value="commit lab02" />
     <MESSAGE value="commit lab03:&#10;create deployment of keycloak" />
     <MESSAGE value="commit lab03:&#10;create deployment of mysql&#10;config reaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit lab03:&#10;create deployment of mysql&#10;config reaml" />
+    <MESSAGE value="commit lab03:&#10;deploy keycloak with production mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit lab03:&#10;deploy keycloak with production mode" />
   </component>
 </project>

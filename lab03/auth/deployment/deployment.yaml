@@ -24,28 +24,66 @@ spec:
           args:
             - "start --import-realm"
           env:
+            - name: KC_LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.log.level
             - name: KC_FEATURES
-              value: token-exchange
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.features
             - name: KC_HOSTNAME
-              value: localhost
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.hostname
             - name: KC_HOSTNAME_STRICT
-              value: "false"
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.hostname.strict
             - name: KC_HOSTNAME_STRICT_HTTPS
-              value: "false"
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.hostname.strict.https
             - name: KC_HTTP_ENABLED
-              value: "true"
-            - name: KC_HTTPS_PROTOCOLS
-              value: "TLSv1.3"
-            - name: KC_HTTPS_CERTIFICATE_FILE
-              value: /opt/keycloak/cert/tls.crt
-            - name: KC_HTTPS_CERTIFICATE_KEY_FILE
-              value: /opt/keycloak/cert/tls.key
-            - name: KC_HEALTH_ENABLED
-              value: "true"
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.http.enable
             - name: KC_HTTPS_PORT
-              value: "8443"
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.https.port
+            - name: KC_HTTPS_PROTOCOLS
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.configuration.https.protocols
+            - name: KC_HTTPS_CERTIFICATE_FILE
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.https.certificate.file
+            - name: KC_HTTPS_CERTIFICATE_KEY_FILE
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.https.certificate.key.file
+            - name: KC_HEALTH_ENABLED
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.health.enabled
             - name: KC_METRICS_ENABLED
-              value: "true"
+              valueFrom:
+                configMapKeyRef:
+                  name: keycloak-config
+                  key: keycloak.metrics.enabled
             - name: KEYCLOAK_ADMIN
               valueFrom:
                 configMapKeyRef:
@@ -76,6 +114,14 @@ spec:
                 secretKeyRef:
                   name: mysql-secrets
                   key: ROOT_PASSWORD
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 1
           ports:
             - name: http
               containerPort: 8080
