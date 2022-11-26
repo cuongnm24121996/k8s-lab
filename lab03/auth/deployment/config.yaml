@@ -7,5 +7,16 @@ data:
   keycloak.configuration.admin.username: admin
   keycloak.configuration.admin.password: admin
   keycloak.configuration.log.level: INFO
+  keycloak.configuration.features: token-exchange
+  keycloak.configuration.hostname: localhost
+  keycloak.configuration.hostname.strict: "false"
+  keycloak.configuration.hostname.strict.https: "false"
+  keycloak.configuration.https.protocols: "TLSv1.3"
+  keycloak.configuration.http.enable: "true"
+  keycloak.configuration.https.port: "8443"
   keycloak.configuration.database.vendor: mysql
   keycloak.configuration.database.address: "jdbc:mysql://mysql-service:3306/keycloak"
+  keycloak.https.certificate.file: /opt/keycloak/cert/tls.crt
+  keycloak.https.certificate.key.file: /opt/keycloak/cert/tls.key
+  keycloak.health.enabled: "true"
+  keycloak.metrics.enabled: "true"
