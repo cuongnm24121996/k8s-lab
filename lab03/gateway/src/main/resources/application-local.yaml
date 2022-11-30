@@ -9,20 +9,13 @@ spring:
           uri: http://localhost:8082/employee
           predicates:
             Path=/employee/**
-#      default-filters:
-#        - TokenRelay
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          keycloak-provider:
-#            client-id: test
-#            client-secret: plZnvPUlQPQdc5XNno9FQtNtiwP1QnCO
-#            scope: openid
-#        provider:
-#          keycloak-provider:
-#            issuer-uri: http://localhost:30001/realms/cloud-gateway
-#            user-name-attribute: preferred_username
+  security:
+    oauth2:
+      resource-server:
+        opaque-token:
+          introspection-uri: http://localhost:30001/realms/cloud-gateway/protocol/openid-connect/token/introspect
+          client-id: test
+          client-secret: plZnvPUlQPQdc5XNno9FQtNtiwP1QnCO
 
 logging:
   level:
