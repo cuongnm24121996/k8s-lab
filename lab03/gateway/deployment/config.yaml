@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gateway-config
+  namespace: default
+data:
+  application.yml: |-
+    spring:
+      cloud:
+        gateway:
+          routes:
+            - id: resources
+              uri: http://backend-resources:8082/messages
+              predicates:
+                Path=/messages/**
+              filters:
+                TokenRelay=
+      security:
+        oauth2:
+          client:
+            registration:
+              gateway-client:
+                provider: keycloak-provider
+                client-id: api-gateway
+                client-secret: 2ixuJzGQkHdWbvxE5NGEY7IT9D2K9Znh
+                authorization-grant-type: authorization_code
+                redirect-uri: "http://localhost:30004/login/oauth2/code/{registrationId}"
+            provider:
+              keycloak-provider:
+                issuer-uri: http://localhost:30001/realms/cloud-gateway

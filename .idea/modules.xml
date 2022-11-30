@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lab02/app1/app1.iml" filepath="$PROJECT_DIR$/lab02/app1/app1.iml" />
       <module fileurl="file://$PROJECT_DIR$/lab02/app2/app2.iml" filepath="$PROJECT_DIR$/lab02/app2/app2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lab01/application/application.iml" filepath="$PROJECT_DIR$/lab01/application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab03/employee/employee.iml" filepath="$PROJECT_DIR$/lab03/employee/employee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab03/gateway/gateway.iml" filepath="$PROJECT_DIR$/lab03/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/k8s-lab.iml" filepath="$PROJECT_DIR$/.idea/k8s-lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab03/keycloak-provider/keycloak-provider.iml" filepath="$PROJECT_DIR$/lab03/keycloak-provider/keycloak-provider.iml" />
     </modules>
   </component>
 </project>
