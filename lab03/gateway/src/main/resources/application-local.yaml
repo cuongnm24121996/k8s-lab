@@ -9,13 +9,17 @@ spring:
           uri: http://localhost:8082/employee
           predicates:
             Path=/employee/**
+        - id: department
+          uri: http://localhost:8081/department
+          predicates:
+            Path=/department/**
   security:
     oauth2:
       resource-server:
         opaque-token:
           introspection-uri: http://localhost:30001/realms/cloud-gateway/protocol/openid-connect/token/introspect
-          client-id: test
-          client-secret: plZnvPUlQPQdc5XNno9FQtNtiwP1QnCO
+          client-id: api-gateway
+          client-secret: 2ixuJzGQkHdWbvxE5NGEY7IT9D2K9Znh
 
 logging:
   level:

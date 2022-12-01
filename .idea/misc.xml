@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/lab03/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/lab03/employee/pom.xml" />
         <option value="$PROJECT_DIR$/lab03/keycloak-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/lab03/department/pom.xml" />
       </list>
     </option>
   </component>

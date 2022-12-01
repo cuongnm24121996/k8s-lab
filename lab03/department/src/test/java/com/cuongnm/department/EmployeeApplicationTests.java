@@ -1,4 +1,4 @@
-package com.cuongnm.employee;
+package com.cuongnm.department;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

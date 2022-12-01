@@ -10,6 +10,7 @@
         <module name="app2" />
         <module name="employee" />
         <module name="keycloak-provider" />
+        <module name="department" />
         <module name="app1" />
         <module name="gateway" />
       </profile>
@@ -17,6 +18,7 @@
     <bytecodeTargetLevel>
       <module name="app1" target="11" />
       <module name="app2" target="11" />
+      <module name="department" target="11" />
       <module name="employee" target="11" />
       <module name="gateway" target="17" />
       <module name="keycloak-provider" target="11" />
@@ -26,6 +28,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="app1" options="-parameters" />
       <module name="app2" options="-parameters" />
+      <module name="department" options="-parameters" />
       <module name="employee" options="-parameters" />
       <module name="gateway" options="-parameters" />
     </option>

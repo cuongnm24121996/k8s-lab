@@ -1,7 +1,7 @@
-package com.cuongnm.employee.config;
+package com.cuongnm.department.config;
 
-import com.cuongnm.employee.security.KeycloakRealmRoleConverter;
-import com.cuongnm.employee.security.UsernameSubClaimAdapter;
+import com.cuongnm.department.security.KeycloakRealmRoleConverter;
+import com.cuongnm.department.security.UsernameSubClaimAdapter;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

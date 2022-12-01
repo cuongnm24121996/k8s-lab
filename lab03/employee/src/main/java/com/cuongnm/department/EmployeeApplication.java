@@ -1,4 +1,4 @@
-package com.cuongnm.employee;
+package com.cuongnm.department;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

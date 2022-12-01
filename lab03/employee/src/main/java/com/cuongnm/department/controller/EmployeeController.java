@@ -1,4 +1,4 @@
-package com.cuongnm.employee.controller;
+package com.cuongnm.department.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
