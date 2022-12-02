@@ -4,38 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f73f6090-a28a-4556-81c6-c77c517bb51f" name="Changes" comment="lab03: config routing">
-      <change afterPath="$PROJECT_DIR$/lab03/department/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/department/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/department/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/department/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/department/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/department/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/DepartmentApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/department/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/department/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/department/security/KeycloakRealmRoleConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/department/security/UsernameSubClaimAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/employee/src/test/java/com/cuongnm/department/EmployeeApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway/exception/TenantException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway/filter/LoggingGlobalFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway/filter/TenantWebFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway/utils/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="f73f6090-a28a-4556-81c6-c77c517bb51f" name="Changes" comment="lab03: add department service">
+      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/config/OAuth2RestTemplateConfigurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/interceptor/CustomClientHttpRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/interceptor/CustomRestTemplateCustomizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/service/impl/DepartmentServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/department/src/main/resources/config/liquibase/master.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/department/interceptor/CustomClientHttpRequestInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/department/interceptor/CustomRestTemplateCustomizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/employee/src/main/resources/config/liquibase/master.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway/security/KeycloakRealmRoleConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway/security/UsernameSubClaimAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcutil_jdk15on_1_69.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/employee/EmployeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/department/EmployeeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/employee/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/employee/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/employee/security/KeycloakRealmRoleConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/security/KeycloakRealmRoleConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/employee/src/main/java/com/cuongnm/employee/security/UsernameSubClaimAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/security/UsernameSubClaimAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/employee/src/test/java/com/cuongnm/employee/EmployeeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/test/java/com/cuongnm/department/EmployeeApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/department/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/controller/DepartmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/department/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/department/src/main/resources/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/employee/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/employee/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab03/employee/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/employee/src/main/resources/config/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab03/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab03/gateway/src/main/resources/application-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/lab03/gateway/src/main/resources/application-local.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -82,7 +76,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/cuongnm11/cuongnm/source/k8s-lab/lab03",
+    "last_opened_file_path": "/Users/cuongnm11/cuongnm/source/k8s-lab/lab03/gateway/src/main/java/com/cuongnm/gateway",
     "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "0e38cb3cf8a788a9561bb7b76548139e"
   }
@@ -92,7 +86,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lab03/gateway/src/main/java/com/cuongnm/gateway" />
+      <recent name="$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department" />
       <recent name="$PROJECT_DIR$/lab03" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lab03/employee/src/main/resources/config" />
+      <recent name="$PROJECT_DIR$/lab03/department/src/main/resources/config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -102,7 +102,21 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DepartmentApplication">
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="app1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cuongnm.k8s.app.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="app2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cuongnm.k8s.app.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DepartmentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="department" />
@@ -143,6 +157,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.DepartmentApplication" />
       <item itemvalue="Spring Boot.EmployeeApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
@@ -157,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669664758724</updated>
       <workItem from="1669664760678" duration="5981000" />
-      <workItem from="1669782623129" duration="19833000" />
+      <workItem from="1669782623129" duration="44451000" />
     </task>
     <task id="LOCAL-00001" summary="lab03: config routing">
       <created>1669797482729</created>
@@ -180,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669814778947</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lab03: add department service">
+      <created>1669865558056</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669865558056</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +222,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab03: config routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab03: config routing" />
+    <MESSAGE value="lab03: add department service" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab03: add department service" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lab03/department/src/main/java/com/cuongnm/department/interceptor/CustomClientHttpRequestInterceptor.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

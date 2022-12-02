@@ -19,7 +19,10 @@ public class SecurityConfiguration {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         // Validate tokens through configured OpenID Provider
-        http.oauth2ResourceServer().jwt().jwtAuthenticationConverter(jwtAuthenticationConverter());
+        http
+            .oauth2ResourceServer()
+                .jwt()
+                .jwtAuthenticationConverter(jwtAuthenticationConverter());
         // Require authentication for all requests
         http.authorizeHttpRequests().anyRequest().authenticated();
         // Allow showing pages within a frame

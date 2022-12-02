@@ -1,9 +1,0 @@
-server:
-  port: 8082
-
-spring:
-  security:
-    oauth2:
-      resource-server:
-        jwt:
-          issuer-uri: http://localhost:30001/realms/cloud-gateway
