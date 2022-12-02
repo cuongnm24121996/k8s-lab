@@ -24,4 +24,5 @@ spring:
 logging:
   level:
     root: info
-    com.cuongnm.gateway: debug
+    com.cuongnm.gateway: info
+    org.apache.http: debug

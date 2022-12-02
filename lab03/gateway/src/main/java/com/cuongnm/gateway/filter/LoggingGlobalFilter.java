@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
@@ -17,10 +18,11 @@ public class LoggingGlobalFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        logger.info("First Pre Global Filter");
+        ServerHttpRequest serverHttpRequest = exchange.getRequest();
+        logger.info("Request: {} ---> {}", serverHttpRequest.getId(), serverHttpRequest.getPath());
         return chain.filter(exchange)
                 .then(Mono.fromRunnable(() -> {
-                    logger.info("Last Post Global Filter");
+                    logger.info("Response: {} ---> {}", serverHttpRequest.getId(), exchange.getResponse().getStatusCode());
                 }));
     }
 
