@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/employee")
 public class EmployeeController {
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String getIndex() {
         return "index";
     }

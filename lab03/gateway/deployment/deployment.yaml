@@ -15,16 +15,15 @@ spec:
       containers:
         - name: gateway
           image: cuongnmdev/gateway:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          envFrom:
-            - configMapRef:
-                name: gateway-config
-#          readinessProbe:
-#            httpGet:
-#              path: /actuator/health
-#              port: 8080
-#            initialDelaySeconds: 5
-#            periodSeconds: 10
-#            timeoutSeconds: 3
-#            failureThreshold: 1
+          env:
+            - name: SERVER_PORT
+              value: "8080"
+            - name: spring.security.oauth2.resourceserver.opaquetoken.introspectionuri
+              value: "http://keycloak:8080/realms/cloud-gateway/protocol/openid-connect/token/introspect"
+            - name: spring.security.oauth2.resourceserver.opaquetoken.clientid
+              value: "api-gateway"
+            - name: spring.security.oauth2.resourceserver.opaquetoken.clientsecret
+              value: "2ixuJzGQkHdWbvxE5NGEY7IT9D2K9Znh"

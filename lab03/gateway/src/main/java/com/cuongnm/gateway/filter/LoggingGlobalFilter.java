@@ -21,9 +21,9 @@ public class LoggingGlobalFilter implements GlobalFilter, Ordered {
         ServerHttpRequest serverHttpRequest = exchange.getRequest();
         logger.info("Request: {} ---> {}", serverHttpRequest.getId(), serverHttpRequest.getPath());
         return chain.filter(exchange)
-                .then(Mono.fromRunnable(() -> {
-                    logger.info("Response: {} ---> {}", serverHttpRequest.getId(), exchange.getResponse().getStatusCode());
-                }));
+                .then(Mono.fromRunnable(() ->
+                        logger.info("Response: {} ---> {}", serverHttpRequest.getId(),
+                                exchange.getResponse().getStatusCode())));
     }
 
     @Override

@@ -1,15 +1,16 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   security:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:30001/realms/cloud-gateway
+          issuer-uri: http://localhost:8080/realms/cloud-gateway
+
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/department?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-service:3306/employee?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
     username: root
     password: root
     hikari:
@@ -22,7 +23,3 @@ spring:
         useServerPrepStmts: true
   liquibase:
     change-log: classpath:config/liquibase/master.xml
-
-logging:
-  level:
-    org.apache.http: debug
